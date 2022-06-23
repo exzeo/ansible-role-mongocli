@@ -1,0 +1,6 @@
+---
+# Mongo Version to install
+mongo_version: "5.0.5"
+
+# Toggling this will uninstall from the server
+uninstall: false

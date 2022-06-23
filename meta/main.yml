@@ -1,0 +1,27 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: mongocli
+  author: exzeo
+  description: Ansible Role for installing mongocli
+  company: "Exzeo"
+  license: MIT
+  min_ansible_version: "2.1"
+
+  platforms:
+  - name: Ubuntu
+    versions:
+      - xenial
+      - bionic
+      - focal
+      - hirsute
+      - impish
+    
+  galaxy_tags:
+    - mongocli
+    - mongo
+    - cli
+    - mongotools
+    - tools
+    - database

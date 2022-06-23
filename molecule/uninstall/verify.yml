@@ -1,0 +1,14 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+
+    - name: Execute mongo version to capture output
+      command: "mongo --version"
+      register: mongo_current_version
+      ignore_errors: yes
+
+    - name: Ensure mongo is not installed
+      assert:
+        that:
+          - mongo_current_version.rc != 0

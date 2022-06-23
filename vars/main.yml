@@ -1,0 +1,15 @@
+---
+dependencies_packages:
+  - gnupg
+  - apt-transport-https
+
+mongo_packages:
+ - mongodb-org 
+ - mongodb-org-database 
+ - mongodb-org-server 
+ - mongodb-org-shell 
+ - mongodb-org-mongos 
+ - mongodb-org-tools
+
+mongo_gpg_key_url: "https://www.mongodb.org/static/pgp/server-5.0.asc"
+mongo_apt_repository: "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu {{ ansible_distribution_release }}/mongodb-org/5.0 multiverse"

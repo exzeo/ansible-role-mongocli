@@ -1,0 +1,17 @@
+---
+#--------------------------------------------------------------
+# Tasks
+#--------------------------------------------------------------
+- name: Install Mongo
+  include_tasks: "install.yml"
+  when: >
+    uninstall == false
+  tags:
+    - install
+
+- name: Uninstall Mongo
+  include_tasks: "uninstall.yml"
+  when: >
+    uninstall == true
+  tags:
+    - uninstall
