@@ -1,10 +1,15 @@
 ---
+
+- name: Execute mongo version to capture output
+  ansible.builtin.command: "mongo --version"
+  register: mongo_current_version
+  changed_when: false
+  failed_when: false
+
 - name: Remove Mongo
   ansible.builtin.apt:
     name: "{{ mongo_packages }}"
     state: absent
-    force: true
-    update_cache: yes
   retries: 5
   delay: 2
 
