@@ -1,7 +1,0 @@
----
-- name: Install
-  hosts: all
-  roles:
-    - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
-      vars:
-        mongo_version: "5.0.5"
