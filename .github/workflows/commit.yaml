@@ -36,7 +36,6 @@ jobs:
         distro:
           - ubuntu:bionic
           - ubuntu:focal
-          - ubuntu:impish
 
     steps:
       - name: Check out the codebase.

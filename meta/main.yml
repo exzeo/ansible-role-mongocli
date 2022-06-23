@@ -14,7 +14,6 @@ galaxy_info:
     versions:
       - bionic
       - focal
-      - impish
     
   galaxy_tags:
     - mongocli
