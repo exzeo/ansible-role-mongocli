@@ -12,7 +12,7 @@ platforms:
 provisioner:
   name: ansible
   playbooks:
-    prepare: ../default/converge.yml
+    prepare: ../specific-version/converge.yml
     converge: converge.yml
 
 verifier:
