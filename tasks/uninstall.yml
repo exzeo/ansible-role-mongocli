@@ -1,21 +1,19 @@
 ---
-- name: Install Mongo
+- name: Remove Mongo
   ansible.builtin.apt:
     name: "{{ mongo_packages }}"
     state: absent
     force: true
     update_cache: yes
-  register: package_ok
   retries: 5
   delay: 2
-  until: package_ok is success
 
-- name: Add an Apt signing key, uses whichever key is at the URL
+- name: Remove Apt signing key
   ansible.builtin.apt_key:
     url: "{{ mongo_gpg_key }}"
     state: absent
 
-- name: Add Mongo Repository
+- name: Remove Repository
   ansible.builtin.apt_repository:
     repo: "{{ mongo_apt_repository }}"
     state: absent
