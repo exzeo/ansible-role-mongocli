@@ -26,7 +26,7 @@ jobs:
         run: yamllint .
 
   molecule:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     
     env:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
@@ -63,3 +63,4 @@ jobs:
           ANSIBLE_FORCE_COLOR: '1'
           MOLECULE_DISTRO_NAME: ${{ env.DISTRO_NAME }}
           MOLECULE_DISTRO_IMAGE: ${{ env.DISTRO_IMAGE }}
+          ANSIBLE_VERBOSITY: 3
