@@ -12,7 +12,7 @@
 
 - name: Add an Apt signing key, uses whichever key is at the URL
   ansible.builtin.apt_key:
-    url: "{{ mongo_gpg_key_url }}"
+    url: "{{ mongo_gpg_key }}"
     state: present
 
 - name: Add Mongo Repository
