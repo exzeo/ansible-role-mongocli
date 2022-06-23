@@ -11,7 +11,7 @@
   until: package_ok is success
 
 - name: Execute mongo version to capture output
-  command: "mongo --version"
+  ansible.builtin.command: "mongo --version"
   register: mongo_current_version
   changed_when: false
   failed_when: false
