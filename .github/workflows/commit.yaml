@@ -34,7 +34,6 @@ jobs:
     strategy:
       matrix:
         distro:
-          - ubuntu:xenial
           - ubuntu:bionic
           - ubuntu:focal
           - ubuntu:hirsute
