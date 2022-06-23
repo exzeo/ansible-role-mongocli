@@ -12,6 +12,7 @@
     state: absent
   retries: 5
   delay: 2
+  when: mongo_current_version.rc == 0
 
 - name: Remove Apt signing key
   ansible.builtin.apt_key:
