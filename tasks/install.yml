@@ -10,6 +10,12 @@
   delay: 2
   until: package_ok is success
 
+- name: Execute mongo version to capture output
+  command: "mongo --version"
+  register: mongo_current_version
+  changed_when: false
+  failed_when: false
+
 - name: Add an Apt signing key, uses whichever key is at the URL
   ansible.builtin.apt_key:
     url: "{{ mongo_gpg_key }}"
@@ -35,3 +41,6 @@
   retries: 5
   delay: 2
   until: package_ok is success
+  when: >
+    (mongo_current_version.rc != 0) or
+    (mongo_version not in mongo_current_version.stdout)
