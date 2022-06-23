@@ -11,5 +11,5 @@ mongo_packages:
  - mongodb-org-mongos 
  - mongodb-org-tools
 
-mongo_gpg_key_url: "https://www.mongodb.org/static/pgp/server-5.0.asc"
+mongo_gpg_keys: "https://www.mongodb.org/static/pgp/server-5.0.asc"
 mongo_apt_repository: "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu {{ ansible_distribution_release }}/mongodb-org/5.0 multiverse"
